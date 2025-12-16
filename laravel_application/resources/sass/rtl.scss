@@ -1,0 +1,453 @@
+// RTL (Right-to-Left) Support for Arabic
+@import 'variables';
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+
+  // Typography
+  body {
+    font-family: $font-family-arabic;
+  }
+
+  // Margins and Paddings - Flip left/right
+  .me-1, .me-2, .me-3, .me-4, .me-5 {
+    margin-right: 0 !important;
+  }
+
+  .me-1 { margin-left: map-get($spacers, 1) !important; }
+  .me-2 { margin-left: map-get($spacers, 2) !important; }
+  .me-3 { margin-left: map-get($spacers, 3) !important; }
+  .me-4 { margin-left: map-get($spacers, 4) !important; }
+  .me-5 { margin-left: map-get($spacers, 5) !important; }
+
+  .ms-1, .ms-2, .ms-3, .ms-4, .ms-5 {
+    margin-left: 0 !important;
+  }
+
+  .ms-1 { margin-right: map-get($spacers, 1) !important; }
+  .ms-2 { margin-right: map-get($spacers, 2) !important; }
+  .ms-3 { margin-right: map-get($spacers, 3) !important; }
+  .ms-4 { margin-right: map-get($spacers, 4) !important; }
+  .ms-5 { margin-right: map-get($spacers, 5) !important; }
+
+  .pe-1, .pe-2, .pe-3, .pe-4, .pe-5 {
+    padding-right: 0 !important;
+  }
+
+  .pe-1 { padding-left: map-get($spacers, 1) !important; }
+  .pe-2 { padding-left: map-get($spacers, 2) !important; }
+  .pe-3 { padding-left: map-get($spacers, 3) !important; }
+  .pe-4 { padding-left: map-get($spacers, 4) !important; }
+  .pe-5 { padding-left: map-get($spacers, 5) !important; }
+
+  .ps-1, .ps-2, .ps-3, .ps-4, .ps-5 {
+    padding-left: 0 !important;
+  }
+
+  .ps-1 { padding-right: map-get($spacers, 1) !important; }
+  .ps-2 { padding-right: map-get($spacers, 2) !important; }
+  .ps-3 { padding-right: map-get($spacers, 3) !important; }
+  .ps-4 { padding-right: map-get($spacers, 4) !important; }
+  .ps-5 { padding-right: map-get($spacers, 5) !important; }
+
+  // Text alignment
+  .text-start {
+    text-align: right !important;
+  }
+
+  .text-end {
+    text-align: left !important;
+  }
+
+  // Float
+  .float-start {
+    float: right !important;
+  }
+
+  .float-end {
+    float: left !important;
+  }
+
+  // Navbar
+  .navbar {
+    .navbar-nav {
+      flex-direction: row-reverse;
+    }
+
+    .navbar-brand {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+
+    .nav-link {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .navbar-toggler {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  // Breadcrumbs
+  .breadcrumb-item + .breadcrumb-item {
+    padding-right: 0.5rem;
+    padding-left: 0;
+
+    &::before {
+      float: right;
+      padding-left: 0.5rem;
+      padding-right: 0;
+      content: "/" !important;
+    }
+  }
+
+  // Dropdowns
+  .dropdown-menu {
+    text-align: right;
+    left: auto;
+    right: 0;
+
+    &.dropdown-menu-end {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .dropdown-item {
+    text-align: right;
+  }
+
+  // Forms
+  .form-check {
+    padding-right: 1.5rem;
+    padding-left: 0;
+
+    .form-check-input {
+      float: right;
+      margin-right: -1.5rem;
+      margin-left: 0;
+    }
+  }
+
+  .form-select {
+    background-position: left 0.75rem center;
+    padding-left: 2.25rem;
+    padding-right: 0.75rem;
+  }
+
+  input[type="tel"],
+  input[type="number"] {
+    direction: ltr;
+    text-align: left;
+  }
+
+  // Input groups
+  .input-group {
+    > .form-control,
+    > .form-select {
+      &:not(:last-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: $input-border-radius;
+        border-bottom-right-radius: $input-border-radius;
+      }
+
+      &:not(:first-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: $input-border-radius;
+        border-bottom-left-radius: $input-border-radius;
+      }
+    }
+  }
+
+  .input-group-text {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $input-border-radius;
+      border-bottom-right-radius: $input-border-radius;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $input-border-radius;
+      border-bottom-left-radius: $input-border-radius;
+    }
+  }
+
+  // Buttons
+  .btn-group {
+    > .btn:not(:last-child):not(.dropdown-toggle) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $btn-border-radius;
+      border-bottom-right-radius: $btn-border-radius;
+    }
+
+    > .btn:nth-child(n + 3),
+    > :not(.btn-check) + .btn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $btn-border-radius;
+      border-bottom-left-radius: $btn-border-radius;
+    }
+  }
+
+  // Cards
+  .card {
+    .card-img-left {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $card-border-radius;
+      border-bottom-left-radius: $card-border-radius;
+    }
+
+    .card-img-right {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $card-border-radius;
+      border-bottom-right-radius: $card-border-radius;
+    }
+  }
+
+  // Product cards
+  .product-card {
+    .product-badge {
+      right: auto;
+      left: 10px;
+    }
+
+    .product-price {
+      .original-price {
+        margin-right: 0;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .product-rating {
+      .rating-count {
+        margin-right: 0;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  // Lists
+  ul, ol {
+    padding-right: 1.5rem;
+    padding-left: 0;
+  }
+
+  // Tables
+  .table {
+    text-align: right;
+
+    th, td {
+      text-align: right;
+    }
+  }
+
+  // Pagination
+  .pagination {
+    .page-item {
+      &:first-child .page-link {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:last-child .page-link {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  // Alerts
+  .alert {
+    border-left: none;
+    border-right: 4px solid;
+
+    .btn-close {
+      margin-right: auto;
+      margin-left: 0.75rem;
+    }
+  }
+
+  // Modals
+  .modal {
+    .modal-header {
+      .close,
+      .btn-close {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+
+    .modal-footer {
+      justify-content: flex-start;
+
+      > * {
+        margin-right: 0;
+        margin-left: 0.5rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  // Tooltips
+  .tooltip {
+    text-align: right;
+  }
+
+  // Progress bars
+  .progress {
+    direction: rtl;
+  }
+
+  // Badges
+  .badge {
+    &.position-absolute {
+      &.top-0.end-0 {
+        right: auto;
+        left: 0;
+      }
+
+      &.top-0.start-0 {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  // Carousel
+  .carousel {
+    .carousel-control-prev {
+      right: 0;
+      left: auto;
+    }
+
+    .carousel-control-next {
+      left: 0;
+      right: auto;
+    }
+
+    .carousel-indicators {
+      direction: rtl;
+    }
+  }
+
+  // Offcanvas
+  .offcanvas {
+    &.offcanvas-start {
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-left: $border-width solid $border-color;
+    }
+
+    &.offcanvas-end {
+      right: auto;
+      left: 0;
+      border-left: none;
+      border-right: $border-width solid $border-color;
+    }
+  }
+
+  // Icons (Font Awesome)
+  .fa-chevron-right::before {
+    content: "\f053"; // chevron-left
+  }
+
+  .fa-chevron-left::before {
+    content: "\f054"; // chevron-right
+  }
+
+  .fa-arrow-right::before {
+    content: "\f060"; // arrow-left
+  }
+
+  .fa-arrow-left::before {
+    content: "\f061"; // arrow-right
+  }
+
+  .fa-angle-right::before {
+    content: "\f104"; // angle-left
+  }
+
+  .fa-angle-left::before {
+    content: "\f105"; // angle-right
+  }
+
+  // Custom RTL utilities
+  .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  .rtl-rotate {
+    transform: rotate(180deg);
+  }
+
+  // Arabic number formatting
+  .arabic-numbers {
+    font-feature-settings: "ss01";
+    unicode-bidi: plaintext;
+  }
+
+  // Special cases for mixed content
+  .ltr-content {
+    direction: ltr;
+    text-align: left;
+  }
+
+  // Currency symbols
+  .currency {
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+
+  // Date and time
+  .datetime {
+    direction: ltr;
+    display: inline-block;
+  }
+
+  // Phone numbers
+  .phone-number {
+    direction: ltr;
+    display: inline-block;
+    unicode-bidi: plaintext;
+  }
+}
+
+// Additional RTL-specific styles
+[lang="ar"] {
+  // Use arabic-indic numerals for certain contexts
+  .use-arabic-numerals {
+    font-variant-numeric: proportional-nums;
+    @supports (font-feature-settings: "ss01") {
+      font-feature-settings: "ss01";
+    }
+  }
+
+  // Better line-height for Arabic
+  body {
+    line-height: $line-height-relaxed;
+  }
+
+  // Letter spacing adjustments
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: normal;
+  }
+}

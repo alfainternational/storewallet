@@ -1,0 +1,139 @@
+{
+  "app_name": "StoreWallet",
+  "welcome": "مرحباً بك في StoreWallet",
+  "subtitle": "منصة التجارة الإلكترونية السودانية",
+
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "auctions": "المزادات",
+    "wallet": "المحفظة",
+    "cart": "السلة",
+    "profile": "الملف الشخصي",
+    "dashboard": "لوحة التحكم",
+    "orders": "الطلبات",
+    "remittances": "التحويلات"
+  },
+
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "submit": "إرسال",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "error": "خطأ",
+    "success": "نجاح",
+    "view_all": "عرض الكل",
+    "no_results": "لا توجد نتائج"
+  },
+
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "remember_me": "تذكرني",
+    "dont_have_account": "ليس لديك حساب؟",
+    "already_have_account": "لديك حساب بالفعل؟",
+    "register_now": "سجل الآن",
+    "login_now": "سجل دخول"
+  },
+
+  "products": {
+    "title": "المنتجات",
+    "all_products": "جميع المنتجات",
+    "no_products": "لا توجد منتجات",
+    "featured_products": "منتجات مميزة",
+    "price": "السعر",
+    "in_stock": "متوفر",
+    "out_of_stock": "نفذت الكمية",
+    "add_to_cart": "أضف للسلة",
+    "buy_now": "اشتر الآن",
+    "description": "الوصف",
+    "reviews": "التقييمات",
+    "seller": "البائع",
+    "category": "الفئة",
+    "quantity": "الكمية"
+  },
+
+  "auctions": {
+    "title": "المزادات",
+    "all_auctions": "جميع المزادات",
+    "active_auctions": "مزادات نشطة",
+    "current_bid": "العرض الحالي",
+    "place_bid": "تقديم عرض",
+    "your_bid": "عرضك",
+    "time_remaining": "الوقت المتبقي",
+    "bid_count": "عدد العروض",
+    "product_auction": "مزاد منتج",
+    "delivery_auction": "مزاد توصيل",
+    "international_auction": "مزاد دولي"
+  },
+
+  "cart": {
+    "title": "سلة التسوق",
+    "empty_cart": "سلة التسوق فارغة",
+    "item": "منتج",
+    "price": "السعر",
+    "quantity": "الكمية",
+    "total": "الإجمالي",
+    "subtotal": "المجموع الجزئي",
+    "proceed_to_checkout": "إتمام الطلب",
+    "remove_item": "إزالة"
+  },
+
+  "wallet": {
+    "title": "المحفظة",
+    "balance": "الرصيد",
+    "available_balance": "الرصيد المتاح",
+    "escrow_balance": "رصيد الضمان",
+    "deposit": "إيداع",
+    "withdraw": "سحب",
+    "transfer": "تحويل",
+    "transactions": "المعاملات",
+    "no_transactions": "لا توجد معاملات"
+  },
+
+  "remittances": {
+    "title": "التحويلات المالية",
+    "send_money": "إرسال أموال",
+    "receive_money": "استقبال أموال",
+    "recipient_name": "اسم المستلم",
+    "recipient_phone": "رقم هاتف المستلم",
+    "amount": "المبلغ",
+    "pickup_code": "رمز الاستلام"
+  },
+
+  "orders": {
+    "title": "الطلبات",
+    "my_orders": "طلباتي",
+    "no_orders": "لا توجد طلبات",
+    "order_number": "رقم الطلب",
+    "order_date": "تاريخ الطلب",
+    "order_status": "حالة الطلب",
+    "order_total": "إجمالي الطلب",
+    "track_order": "تتبع الطلب"
+  },
+
+  "profile": {
+    "title": "الملف الشخصي",
+    "personal_info": "المعلومات الشخصية",
+    "contact_info": "معلومات الاتصال",
+    "change_password": "تغيير كلمة المرور",
+    "logout": "تسجيل الخروج"
+  }
+}
